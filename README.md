@@ -1,14 +1,14 @@
 # VietNamese-Sign-Language-Recognition
-🤟 Real-time Sign Language Recognition App
+🤟 Real-time Sign Language Recognition App:
 A complete mobile + AI system that detects and translates Vietnamese sign language gestures in real time.
 The project combines Android app development, computer vision, and deep learning to help bridge communication gaps for sign language users.
 
-📌 Description
+📌 Description:
 This project allows users to perform Vietnamese sign language in front of their phone’s camera.
 The system records video, detects body and hand movements, and uses a trained AI model to predict the meaning of the gesture.
 It works in real time, providing fast and reliable feedback to the user directly on the mobile screen.
 
-🚀 Key Features
+🚀 Key Features:
 Real-time gesture capture using Android's CameraX with live preview, camera flip, and flash control.
 
 AI-powered recognition with a custom-trained LSTM model using data from MediaPipe Holistic (pose + hands).
@@ -21,7 +21,7 @@ Fast backend response using FastAPI, returning predictions in JSON format for im
 
 Supports recognition of 13 common Vietnamese signs, such as "Bố mẹ", "Con dê", "Ngày của mẹ", etc.
 
-📊 Data Collection
+📊 Data Collection:
 Sign language samples were recorded as short videos for each gesture class.
 
 MediaPipe Holistic was used to extract 3D landmarks for:
@@ -38,7 +38,7 @@ Data saved as .npy format for efficient loading and training.
 
 Applied data augmentation to increase variation and improve model robustness (e.g. flipping, jittering).
 
-🧠 Model Training
+🧠 Model Training:
 Model type: LSTM (Long Short-Term Memory) sequence model using TensorFlow/Keras.
 
 Input: 60 x 99 sequences (60 frames per gesture, 99 keypoints per frame).
@@ -53,7 +53,7 @@ Monitored validation accuracy and loss to select the best model.
 
 Final model saved as: best_lstm_model_v5.keras.
 
-🔄 Real-time Prediction Workflow
+🔄 Real-time Prediction Workflow:
 On Android App:
 CameraX captures live frames (JPEG).
 
@@ -77,7 +77,7 @@ Returns the predicted gesture if confidence ≥ 0.8.
 Sends result as JSON response:
 Example: { "predictions": "Hoc tap" }
 
-⚙️ Prerequisites
+⚙️ Prerequisites:
 ✅ Android App
 Android Studio
 
@@ -105,7 +105,8 @@ OpenCV
 Uvicorn
 
 NumPy
-✅ Conclusion
+
+✅ Conclusion:
 This project is a practical demonstration of how machine learning and mobile development can be combined to create inclusive, real-world applications.
 It can be extended with:
 
